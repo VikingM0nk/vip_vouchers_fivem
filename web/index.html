@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIP Vouchers</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app" class="hidden">
+      <div class="panel">
+        <header class="panel-header">
+          <div>
+            <p class="eyebrow">Exclusive perks</p>
+            <h1 id="menu-title">VIP Vouchers</h1>
+          </div>
+          <button id="close-btn" class="icon-btn" aria-label="Close">×</button>
+        </header>
+
+        <div class="panel-body">
+          <aside class="categories" id="categories"></aside>
+          <section class="entries">
+            <div class="entries-header">
+              <h2 id="category-title">Select a category</h2>
+              <p id="category-subtitle">Choose a voucher to redeem.</p>
+            </div>
+            <aside id="instructions-panel" class="instructions-panel hidden">
+              <div class="instructions-header">
+                <div>
+                  <p class="eyebrow">Need help?</p>
+                  <h3 id="instructions-title">How to Purchase & Redeem</h3>
+                </div>
+                <button id="instructions-toggle" class="icon-btn instructions-toggle" aria-label="Toggle instructions">−</button>
+              </div>
+              <div id="instructions-body" class="instructions-body">
+                <ol id="instructions-steps" class="instructions-steps"></ol>
+                <p id="instructions-note" class="instructions-note"></p>
+                <div class="instructions-actions">
+                  <button id="instructions-discord-btn" class="entry-action discord-action hidden">Open Discord</button>
+                </div>
+              </div>
+            </aside>
+            <div id="entries" class="entry-grid"></div>
+          </section>
+        </div>
+      </div>
+
+      <div id="pick-modal" class="modal hidden">
+        <div class="modal-card">
+          <header class="modal-header">
+            <div>
+              <p class="eyebrow">Pick your rewards</p>
+              <h2 id="pick-title">Pick 3</h2>
+            </div>
+            <button id="pick-close-btn" class="icon-btn" aria-label="Close picker">×</button>
+          </header>
+          <p id="pick-subtitle" class="pick-subtitle">Select exactly 3 items.</p>
+          <div id="pick-choices" class="pick-grid"></div>
+          <footer class="modal-footer">
+            <span id="pick-counter">0 / 3 selected</span>
+            <button id="pick-confirm-btn" class="entry-action" disabled>Confirm Selection</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
